@@ -83,3 +83,6 @@ class KMainP<V> : KBasePresenter<V>() {
 }
 ```
 fragment使用方式一样的
+
+### Presenter构造方法传参
+具体可以看下谷歌的LiveData使用方式
