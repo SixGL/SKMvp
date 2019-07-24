@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="c.s">
+
+    <application>
+        <activity android:name=".base.KBaseActivity" />
+        <activity android:name=".base.KBaseCommonActivity"></activity>
+    </application>
+
+</manifest>
