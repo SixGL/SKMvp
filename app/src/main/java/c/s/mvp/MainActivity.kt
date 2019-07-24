@@ -13,8 +13,8 @@ class MainActivity : KBaseCommonActivity<KMainV,KMainP<KMainV>>(), View.OnClickL
 
     override fun prologic() {
         setViewClick(this,mvp)
-        p?.getMainLiveData()?.observe(this, Observer<String>{data->
-            Toast.makeText(mActivity, data, Toast.LENGTH_SHORT).show()
+        p?.getMainLiveData()?.observe(this, Observer { data->
+            Toast.makeText(this,data,Toast.LENGTH_SHORT).show()
         })
     }
 
