@@ -1,4 +1,18 @@
 ### 引用方式
+#### 注意
+因为库中时直接引用的项目的kotlin（目的是为了跟项目的Kotlin版本一致）
+```
+implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version
+```
+所以在项目gradle中需要支持kotlin：
+```
+ext.kotlin_version = '1.3.31'  // 根据自己需求选择版本
+    repositories {
+        google()
+        jcenter()
+    }
+```
+
 ```
 allprojects {
 		repositories {
