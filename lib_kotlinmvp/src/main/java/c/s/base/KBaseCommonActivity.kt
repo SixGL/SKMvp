@@ -70,10 +70,15 @@ abstract class KBaseCommonActivity<V, P : KBasePresenter<V>> : KBaseActivity() {
         return 0
     }
 
+    @Deprecated("废弃")
     fun initStatusbar(const: ConstraintLayout) {
         KStatusBarUtil.setStatusBarTranslucent(mActivity, true)
         initState(const)
 
+    }
+    fun initStatusbar(const: ConstraintLayout,isLightStatusBar:Boolean) {
+        KStatusBarUtil.setStatusBarTranslucent(mActivity, isLightStatusBar)
+        initState(const)
     }
 
     /**
@@ -91,7 +96,7 @@ abstract class KBaseCommonActivity<V, P : KBasePresenter<V>> : KBaseActivity() {
             tabBar.visibility = View.VISIBLE
             //获取到状态栏的高度
             val statusHeight = getStatusBarHeight(mActivity)
-            Log.e("状态栏高度", "high  " + statusHeight)
+            Log.i("状态栏高度", "high =" + statusHeight)
             //动态的设置隐藏布局的高度
             val params = tabBar.layoutParams as ConstraintLayout.LayoutParams
             params.height = statusHeight

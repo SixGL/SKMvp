@@ -9,7 +9,10 @@ import java.util.ArrayList
 
 abstract class KBaseActivity : AppCompatActivity() {
 
-    var arrayList: ArrayList<Activity>? = null
+    companion object {
+        var arrayList: ArrayList<Activity>? = null
+    }
+
     var mActivity: Activity? = null
     var mContext: Context? = null
 
@@ -21,9 +24,10 @@ abstract class KBaseActivity : AppCompatActivity() {
         mContext = this
 
         var weak: WeakReference<Activity> = WeakReference<Activity>(this)
-        arrayList = ArrayList()
-
-        arrayList!!.add(weak!!.get()!!)
+        if (arrayList == null) {
+            arrayList = ArrayList()
+        }
+        arrayList?.add(weak!!.get()!!)
         onCreateFrame(savedInstanceState)
     }
 
