@@ -23,7 +23,7 @@ allprojects {
 ``` 
 ```
 dependencies {
-	        implementation 'com.github.SixGL:SKMvp:0.1-release'
+	         implementation 'com.github.SixGL:SKMvp:v0.1.01'
 	}
 ```
 ### 简介
